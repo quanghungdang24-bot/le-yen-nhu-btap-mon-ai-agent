@@ -1,5 +1,13 @@
 {
+  "functions": {
+    "server.py": {
+      "includeFiles": "{web/**,modules/**}"
+    }
+  },
   "rewrites": [
-    { "source": "/(.*)", "destination": "server.py" }
+    {
+      "source": "/(.*)",
+      "destination": "server.py"
+    }
   ]
 }
