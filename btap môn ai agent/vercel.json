@@ -1,13 +1,18 @@
 {
-  "functions": {
-    "server.py": {
-      "includeFiles": "{web/**,modules/**}"
-    }
-  },
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "server.py"
+      "src": "server.py",
+      "use": "@vercel/python",
+      "config": {
+        "includeFiles": ["web/**", "modules/**"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.py"
     }
   ]
 }
